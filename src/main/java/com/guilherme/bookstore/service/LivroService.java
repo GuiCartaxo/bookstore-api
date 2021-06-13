@@ -61,4 +61,11 @@ public class LivroService {
 		
 		return livroRepository.save(obj);
 	}
+
+	public void delete(Integer id) {
+		
+		Livro obj = findById(id);
+		
+		livroRepository.delete(obj);
+	}
 }
